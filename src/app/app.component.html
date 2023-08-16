@@ -1,0 +1,29 @@
+
+<div class="table-container">
+  <div class="row">
+    <div class="search-data">
+      <input type="text" name="search" [(ngModel)]="searchText"  placeholder="Search..">
+    </div>
+
+    <table class="table" >
+      <thead>
+        <tr>
+          <th>S NO</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+          <th>Phone Number</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let data of filteredData">
+          <td>{{data.id}}</td>
+          <td>{{data.fname}}</td>
+          <td>{{data.lname}}</td>
+          <td>{{data.email}}</td>
+          <td>{{data.pnumber}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
